@@ -1,6 +1,5 @@
 /*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
-
 /*=============== VARIABLES CSS ===============*/
 :root {
   /*========== Colors ==========*/
@@ -10,13 +9,13 @@
   --text-color: hsl(var(--hue-color), 12%, 35%);
   --body-color: hsl(var(--hue-color), 49%, 98%);
   --container-color: #FFF;
+  --black-color: #121212;
   /*========== Font and typography ==========*/
-  --body-font: 'Poppins', sans-serif;
+  --body-font: "Poppins", sans-serif;
   --normal-font-size: .938rem;
   --small-font-size: .813rem;
   --smaller-font-size: .75rem;
 }
-
 @media screen and (min-width: 968px) {
   :root {
     --normal-font-size: 1rem;
@@ -39,6 +38,10 @@ body {
   color: var(--text-color);
 }
 
+a {
+  text-decoration: none;
+}
+
 /*=============== LAYOUT ===============*/
 .container {
   max-width: 968px;
@@ -52,105 +55,118 @@ body {
   align-content: center;
   height: 100vh;
 }
-
 .accordion__container {
   display: grid;
-  row-gap: .75rem;
+  row-gap: 0.75rem;
   padding: 2rem 1rem;
   background-color: var(--container-color);
-  border-radius: .5rem;
-  box-shadow: 0 12px 32px rgba(51, 51, 51, 0.1);
+  border-radius: 0.5rem;
+  box-shadow: 0 12px 32px hsla(0, 0%, 20%, 0.1);
 }
-
+.accordion__user {
+  text-align: center;
+  margin-bottom: 1.6rem;
+  font-size: 1.3rem;
+}
 .accordion__title {
   font-size: var(--small-font-size);
   color: var(--title-color);
   font-weight: 400;
-  margin-top: .15rem;
-  transition: .2s;
+  margin-top: 0.15rem;
+  transition: 0.2s;
 }
-
 .accordion__header {
   display: flex;
-  column-gap: .5rem;
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
   padding: 1.25rem 1.25rem 1.25rem 1rem;
   cursor: pointer;
 }
-
 .accordion__description {
   padding: 0 1.25rem 1.25rem 3rem;
   font-size: var(--smaller-font-size);
 }
-
 .accordion__icon {
   font-size: 1.5rem;
+  height: -moz-max-content;
   height: max-content;
   color: var(--title-color);
-  transition: .3s;
+  transition: 0.3s;
 }
-
 .accordion__item {
-  box-shadow: 0 2px 6px rgba(38, 38, 38, 0.1);
+  box-shadow: 0 2px 6px hsla(0, 0%, 15%, 0.1);
   background-color: var(--container-color);
-  border-radius: .25rem;
+  border-radius: 0.25rem;
   position: relative;
-  transition: all .25s ease;
+  transition: all 0.25s ease;
 }
-
 .accordion__item::after {
-  content: '';
+  content: "";
   background-color: var(--first-color);
   width: 5px;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  border-radius: .25rem 0 0 .25rem;
+  border-radius: 0.25rem 0 0 0.25rem;
 }
-
 .accordion__item:nth-child(1) {
-  background-color: #fff7f0;
+  background-color: hsl(28, 100%, 97%);
 }
-
 .accordion__item:nth-child(1)::after {
-  background-color: #ffc08a;
+  background-color: hsl(28, 100%, 77%);
 }
-
 .accordion__item:nth-child(2) {
-  background-color: #f0f0ff;
+  background-color: hsl(240, 100%, 97%);
 }
-
 .accordion__item:nth-child(2)::after {
-  background-color: #8a8aff;
+  background-color: hsl(240, 100%, 77%);
 }
-
 .accordion__item:nth-child(3) {
-  background-color: #fff0f3;
+  background-color: hsl(348, 100%, 97%);
 }
-
 .accordion__item:nth-child(3)::after {
-  background-color: #ff8aa1;
+  background-color: hsl(348, 100%, 77%);
 }
-
 .accordion__item:nth-child(4) {
-  background-color: #f0faff;
+  background-color: hsl(200, 100%, 97%);
 }
-
 .accordion__item:nth-child(4)::after {
-  background-color: #8ad8ff;
+  background-color: hsl(200, 100%, 77%);
 }
-
 .accordion__content {
   overflow: hidden;
   height: 0;
-  transition: all .25s ease;
+  transition: all 0.25s ease;
+}
+.accordion .exit {
+  position: absolute;
+  right: 1.1rem;
+  top: 1.1rem;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.3rem;
+  color: rgba(255, 0, 0, 0.527);
+  cursor: pointer;
+}
+.accordion .exit i {
+  transition: all 0.3s ease-in-out;
+}
+.accordion .exit:hover {
+  color: red;
+}
+.accordion .exit:hover i {
+  margin-left: 6px;
 }
 
 /*Rotate icon and add font weight to titles*/
 .accordion-open .accordion__icon {
   transform: rotate(45deg);
 }
-
 .accordion-open .accordion__title {
   font-weight: 600;
 }
@@ -162,22 +178,18 @@ body {
     width: 550px;
     padding: 2.5rem;
     justify-self: center;
-    border-radius: .75rem;
+    border-radius: 0.75rem;
   }
-
   .accordion__header {
     padding: 1.5rem;
   }
-
   .accordion__title {
     padding-right: 3.5rem;
   }
-
   .accordion__description {
     padding: 0 4rem 1.25rem 3.5rem;
   }
 }
-
 /* For large devices */
 @media screen and (min-width: 968px) {
   .container {
@@ -185,3 +197,46 @@ body {
     margin-right: auto;
   }
 }
+/*==============SOCIALS==============*/
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 6rem;
+}
+.socials i {
+  background: var(--container-color);
+  box-shadow: 0 12px 32px hsla(0, 0%, 20%, 0.1);
+  padding: 0.6rem;
+  border-radius: 50%;
+  font-size: 2rem;
+  color: var(--text-color);
+  margin: 3px;
+}
+.socials a {
+  border: 2px solid transparent;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+}
+.socials a:nth-child(1):hover {
+  transform: scale(1.1);
+  border: 2px solid red;
+}
+.socials a:nth-child(1):hover i {
+  color: red;
+}
+.socials a:nth-child(2):hover {
+  transform: scale(1.1);
+  border: 2px solid blue;
+}
+.socials a:nth-child(2):hover i {
+  color: blue;
+}
+.socials a:nth-child(3):hover {
+  transform: scale(1.1);
+  border: 2px solid aqua;
+}
+.socials a:nth-child(3):hover i {
+  color: aqua;
+}/*# sourceMappingURL=styles.css.map */

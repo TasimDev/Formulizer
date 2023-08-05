@@ -1,0 +1,60 @@
+/*==============SOCIALS==============*/
+.socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 6rem;
+
+    i {
+        background: var(--container-color);
+        box-shadow: 0 12px 32px hsla(0, 0%, 20%, 0.1);
+        padding: .6rem;
+        border-radius: 50%;
+        font-size: 2rem;
+        color: var(--text-color);
+        margin: 3px;
+    }
+
+    a {
+        border: 2px solid transparent;
+        border-radius: 50%;
+        transition: all .3s ease-in-out;
+
+        &:nth-child(1) {
+            &:hover {
+                transform: scale(1.1);
+                border: 2px solid red;
+
+                i {
+                    color: red;
+                }
+            }
+        }
+
+        &:nth-child(2) {
+            &:hover {
+                transform: scale(1.1);
+                border: 2px solid blue;
+
+                i {
+                    color: blue;
+                }
+            }
+        }
+
+        &:nth-child(3) {
+            &:hover {
+                transform: scale(1.1);
+                border: 2px solid aqua;
+
+                i {
+                    color: aqua;
+                }
+            }
+        }
+    }
+
+
+
+}

@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
 /*=============== VARIABLES CSS ===============*/
-:root{
+:root {
     /*========== Colors ==========*/
     --hue-color: 225;
 
@@ -11,7 +11,7 @@
     --text-color: hsl(var(--hue-color), 12%, 35%);
     --body-color: hsl(var(--hue-color), 49%, 98%);
     --container-color: #FFF;
-
+    --black-color: #121212;
     /*========== Font and typography ==========*/
     --body-font: 'Poppins', sans-serif;
 
@@ -19,7 +19,7 @@
     --small-font-size: .813rem;
     --smaller-font-size: .75rem;
 
-    @media screen and (min-width: 968px){
+    @media screen and (min-width: 968px) {
         --normal-font-size: 1rem;
         --small-font-size: .875rem;
         --smaller-font-size: .813rem;

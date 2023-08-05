@@ -31,6 +31,7 @@ $accordionContainer.on('click', '.accordion__item', function () {
 $accordionContainer.on('click', '.accordion-open', function () {
     let selectedElementContent = $(this).children('.accordion__content');
     selectedElementContent.removeAttr('style');
+    $(this).removeClass('accordion-open')
 })
 
 
