@@ -239,4 +239,101 @@ a {
 }
 .socials a:nth-child(3):hover i {
   color: aqua;
+}
+
+.form {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10rem;
+  width: 100%;
+}
+.form .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.form .wrapper .title {
+  font-size: 2rem;
+  padding: 3px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.form .wrapper .title span {
+  color: rgb(12, 100, 174);
+  border-left: 2px solid rgb(12, 100, 174);
+  padding-left: 6px;
+}
+.form .wrapper .socials {
+  margin: 0;
+}
+.form .wrapper form {
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 2rem;
+}
+.form .wrapper form .inputBox {
+  position: relative;
+  width: 100%;
+}
+.form .wrapper form .inputBox input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid rgba(128, 128, 128, 0.589);
+  outline: none;
+  color: #121212;
+  font-family: var(--body-font);
+  background: #fff;
+}
+.form .wrapper form .inputBox input:valid ~ span, .form .wrapper form .inputBox input:focus ~ span {
+  transform: translateX(10px) translateY(-7px);
+  font-size: 0.7em;
+  padding: 0 10px;
+  color: #fff;
+  background-color: rgb(12, 100, 174);
+}
+.form .wrapper form .inputBox input:valid, .form .wrapper form .inputBox input:focus {
+  border: 1px solid rgb(12, 100, 174);
+}
+.form .wrapper form .inputBox span {
+  position: absolute;
+  left: 0;
+  padding: 10px;
+  pointer-events: none;
+  font-size: 1em;
+  color: rgba(128, 128, 128, 0.589);
+  transition: all 0.5s ease-in-out;
+}
+.form .wrapper form .registation button {
+  border: 2px solid transparent;
+  outline: none;
+  background: none;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  color: rgb(102, 1, 80);
+  cursor: pointer;
+}
+.form .wrapper form .registation button:hover {
+  border-bottom: 2px solid rgb(102, 1, 80);
+}
+.form .wrapper form .btn-submit {
+  padding: 10px;
+  width: 100%;
+  font-size: 1rem;
+  background: rgb(40, 116, 183);
+  background: linear-gradient(106deg, rgb(40, 116, 183) 8%, rgb(49, 65, 140) 43%, rgb(91, 15, 93) 85%);
+  border: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: var(--body-font);
+  cursor: pointer;
 }/*# sourceMappingURL=styles.css.map */
