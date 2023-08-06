@@ -1,0 +1,36 @@
+@import './animation';
+
+.btn-submit-ripple {
+    padding: 10px;
+    width: 100%;
+    font-size: 1rem;
+    background: rgb(40, 116, 183);
+    background: linear-gradient(106deg, rgba(40, 116, 183, 1) 8%, rgba(49, 65, 140, 1) 43%, rgba(91, 15, 93, 1) 85%);
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: var(--body-font);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+
+    .ripple {
+        position: absolute;
+        border-radius: 50%;
+        background-color: #ffffffa8;
+        width: 100px;
+        height: 100px;
+        margin-top: -50px;
+        margin-left: -50px;
+        animation: ripple 1s;
+        opacity: 0;
+    }
+
+
+    &:hover {
+        background: linear-gradient(-106deg, rgba(40, 116, 183, 1) 8%, rgba(49, 65, 140, 1) 43%, rgba(91, 15, 93, 1) 85%);
+    }
+
+
+}

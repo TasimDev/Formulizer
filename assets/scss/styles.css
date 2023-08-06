@@ -36,6 +36,7 @@ body {
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
   color: var(--text-color);
+  overflow-x: hidden;
 }
 
 a {
@@ -49,6 +50,16 @@ a {
   margin-right: 1rem;
 }
 
+@keyframes ripple {
+  from {
+    opacity: 1;
+    transform: scale(0);
+  }
+  to {
+    opacity: 0;
+    transform: scale(10);
+  }
+}
 /*=============== ACCORDION ===============*/
 .accordion {
   display: grid;
@@ -241,6 +252,7 @@ a {
   color: aqua;
 }
 
+/*==============FORM==========*/
 .form {
   position: absolute;
   display: flex;
@@ -324,7 +336,39 @@ a {
 .form .wrapper form .registation button:hover {
   border-bottom: 2px solid rgb(102, 1, 80);
 }
-.form .wrapper form .btn-submit {
+
+.form.login {
+  transform: translateX(-40%);
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.25s ease-in-out;
+}
+
+.form.registration {
+  transform: translateX(40%);
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.25s ease-in-out;
+}
+
+.form.login.active,
+.form.registration.active {
+  transform: translateX(0);
+  pointer-events: visible;
+  opacity: 1;
+}
+
+@keyframes ripple {
+  from {
+    opacity: 1;
+    transform: scale(0);
+  }
+  to {
+    opacity: 0;
+    transform: scale(10);
+  }
+}
+.btn-submit-ripple {
   padding: 10px;
   width: 100%;
   font-size: 1rem;
@@ -336,4 +380,20 @@ a {
   font-weight: 500;
   font-family: var(--body-font);
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.btn-submit-ripple .ripple {
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.6588235294);
+  width: 100px;
+  height: 100px;
+  margin-top: -50px;
+  margin-left: -50px;
+  animation: ripple 1s;
+  opacity: 0;
+}
+.btn-submit-ripple:hover {
+  background: linear-gradient(-106deg, rgb(40, 116, 183) 8%, rgb(49, 65, 140) 43%, rgb(91, 15, 93) 85%);
 }/*# sourceMappingURL=styles.css.map */

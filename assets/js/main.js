@@ -34,4 +34,44 @@ $accordionContainer.on('click', '.accordion-open', function () {
     $(this).removeClass('accordion-open')
 })
 
+//Ripple Effent
+
+$('.btn-submit-ripple').on('click', function (e) {
+    let x = e.clientX - e.target.offsetLeft;
+    let y = e.clientY - e.target.offsetTop;
+
+    let $ripples = $(`<span class='ripple'></span>`);
+    $ripples.css('left', x);
+    $ripples.css('top', y);
+
+    $(this).append($ripples);
+    setTimeout(() => {
+        $ripples.remove();
+    }, 300);
+})
+
+//Button
+
+let $formRegistration, $formLogin;
+$formRegistration = $('.registration')
+$formLogin = $('.login')
+
+$('.btn-register').on('click', function () {
+    $formLogin.removeClass('active');
+    if ($formRegistration.hasClass('active')) {
+        $formRegistration.removeClass('active');
+    } else {
+        $formRegistration.addClass('active');
+    }
+
+})
+$('.btn-login').on('click', function () {
+    $formRegistration.removeClass('active');
+    if ($formLogin.hasClass('active')) {
+        $formLogin.removeClass('active');
+    } else {
+        $formLogin.addClass('active');
+    }
+})
+
 

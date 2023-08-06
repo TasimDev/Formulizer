@@ -16,8 +16,45 @@
 </head>
 
 <body>
-    <div class="form registration"></div>
-    <div class="form login">
+    <div class="form registration">
+        <div class="wrapper">
+            <h3 class="title">Register in to <span>Unbelievable Digital</span></h3>
+            <div class="socials">
+                <div class="socials">
+                    <a href="https://www.instagram.com/unbelievable.digital/?hl=en" target="_blank"><i
+                            class='bx bxl-instagram-alt socials__instagram'></i></a>
+                    <a href="https://www.facebook.com/unbelievable.digital/" target="_blank"> <i
+                            class='bx bxl-facebook-circle socials__facebook'></i></a>
+                    <a href="#" target="_blank"><i class='bx bxl-twitter socials__twitter'></i></a>
+                </div>
+            </div>
+            <form action="#" method="post">
+                <div class="inputBox">
+                    <input type="text" name="username" id="username" required>
+                    <span class="text">Username</span>
+                </div>
+                <div class="inputBox">
+                    <input type="email" name="email" id="email" required>
+                    <span class="text">Email</span>
+                </div>
+                <div class="inputBox">
+                    <input type="text" name="phone" id="phone" required>
+                    <span class="text">Phone</span>
+                </div>
+                <div class="inputBox">
+                    <input type="password" name="password" id="pasword" required>
+                    <span class="text">Password</span>
+                </div>
+                <div class="registation">
+                    <span>Youi haven an account?</span>
+                    <button class="btn-login">Log in</button>
+                </div>
+                <button type="submit" class="btn-submit-ripple">Register</button>
+            </form>
+        </div>
+
+    </div>
+    <div class="form login active">
         <div class="wrapper">
             <h3 class="title">Log in to <span>Unbelievable Digital</span></h3>
             <div class="socials">
@@ -40,9 +77,9 @@
                 </div>
                 <div class="registation">
                     <span>Youi haven't account?</span>
-                    <button class="register">Register Now</button>
+                    <button class="btn-register">Register Now</button>
                 </div>
-                <input type="submit" value="Log in" class="btn-submit">
+                <button type="submit" class="btn-submit-ripple">Log in</button>
             </form>
         </div>
     </div>
