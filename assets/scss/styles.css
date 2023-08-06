@@ -207,6 +207,9 @@ a {
     margin-left: auto;
     margin-right: auto;
   }
+  form {
+    width: 60%;
+  }
 }
 /*==============SOCIALS==============*/
 .socials {
@@ -282,7 +285,7 @@ a {
   margin: 0;
 }
 .form .wrapper form {
-  width: 60%;
+  width: 80%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -324,16 +327,13 @@ a {
   color: rgba(128, 128, 128, 0.589);
   transition: all 0.5s ease-in-out;
 }
-.form .wrapper form .registation button {
+.form .wrapper form .registration a {
   border: 2px solid transparent;
-  outline: none;
-  background: none;
-  font-family: var(--body-font);
   font-size: var(--normal-font-size);
   color: rgb(102, 1, 80);
   cursor: pointer;
 }
-.form .wrapper form .registation button:hover {
+.form .wrapper form .registration a:hover {
   border-bottom: 2px solid rgb(102, 1, 80);
 }
 
