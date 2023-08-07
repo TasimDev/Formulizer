@@ -75,3 +75,12 @@ $('.btn-login').on('click', function () {
 })
 
 
+//Message
+
+$('#btn-register').on('click', function (e) {
+    $('.message').addClass('active');
+    setTimeout(() => {
+        $('.message').removeClass('active');
+    }, 5000);
+    e.preventDefault();
+})

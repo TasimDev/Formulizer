@@ -16,6 +16,13 @@
 </head>
 
 <body>
+    <div class="message">
+        <div class="message-content">
+            <i class='bx bxs-check-circle'></i>
+            <span class="text">Successfully registered!</span>
+        </div>
+        <div class="progress"></div>
+    </div>
     <div class="form registration">
         <div class="wrapper">
             <h3 class="title">Register in to <span>Unbelievable Digital</span></h3>
@@ -28,7 +35,8 @@
                     <a href="#" target="_blank"><i class='bx bxl-twitter socials__twitter'></i></a>
                 </div>
             </div>
-            <form action="registration.php" method="post">
+
+            <form method="post">
                 <div class="inputBox">
                     <input type="text" name="username" id="username" required>
                     <span class="text">Username</span>
@@ -49,7 +57,7 @@
                     <span>Youi haven an account?</span>
                     <a class="btn-login">Log in</a>
                 </div>
-                <button type="submit" class="btn-submit-ripple">Register</button>
+                <button type="submit" class="btn-submit-ripple" id="btn-register">Register</button>
             </form>
         </div>
 
@@ -66,7 +74,7 @@
                     <a href="#" target="_blank"><i class='bx bxl-twitter socials__twitter'></i></a>
                 </div>
             </div>
-            <form action="#" method="post">
+            <form action="./home-page.html" method="get">
                 <div class="inputBox">
                     <input type="text" name="username" id="username" required>
                     <span class="text">Username</span>
@@ -79,7 +87,7 @@
                     <span>Youi haven't account?</span>
                     <a class="btn-register">Register Now</a>
                 </div>
-                <button type="submit" class="btn-submit-ripple">Log in</button>
+                <button type="submit" class="btn-submit-ripple" action="https://google.com">Log in</button>
             </form>
         </div>
     </div>
