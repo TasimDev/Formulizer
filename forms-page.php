@@ -28,7 +28,7 @@
                     <a href="#" target="_blank"><i class='bx bxl-twitter socials__twitter'></i></a>
                 </div>
             </div>
-            <form action="#" method="post">
+            <form action="registration.php" method="post">
                 <div class="inputBox">
                     <input type="text" name="username" id="username" required>
                     <span class="text">Username</span>
