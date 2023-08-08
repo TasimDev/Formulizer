@@ -77,10 +77,17 @@ $('.btn-login').on('click', function () {
 
 //Message
 
-$('#btn-register').on('click', function (e) {
-    $('.message').addClass('active');
+function Message(msg) {
+
+    $message.addClass('active');
     setTimeout(() => {
         $('.message').removeClass('active');
     }, 5000);
+}
+
+//Getting the elements in input fields
+
+$('#btn-register').on('click', function (e) {
+    Message();
     e.preventDefault();
 })
